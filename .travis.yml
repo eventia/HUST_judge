@@ -1,0 +1,30 @@
+language: php
+
+sudo: false
+
+services:
+    - mysql
+
+php:
+    - '7.0'
+
+env:
+    global:
+        - APP_DEBUG=false
+
+before_script:
+    - composer install --no-interaction
+    - cp .env.travis .env
+    - php artisan key:generate
+    - php artisan migrate
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+
+before_install:
+    - mysql -e 'create database `hustoj`;'
+
+script:
+    - phpunit --coverage-text

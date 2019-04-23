@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env process.env.section=front NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env process.env.section=front NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env process.env.section=front NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "admin-dev": "npm run admin-development",
+    "admin-development": "cross-env process.env.section=backend NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "admin-watch": "cross-env process.env.section=backend NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "admin-prod": "npm run admin-production",
+    "admin-production": "cross-env process.env.section=backend NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "axios": "^0.17",
+    "bootstrap": "^3.3.7",
+    "cross-env": "^5.1",
+    "jquery": "^3.2",
+    "laravel-mix": "^1.7.2",
+    "lodash": "^4.17.4",
+    "vue": "^2.5.7",
+    "element-ui": "^1.3.7",
+    "vue-html5-editor": "^1.1.1",
+    "vue-loader": "^13.6.2",
+    "vue-router": "^3.0.1",
+    "vue-cookie": "^1.1.4",
+    "code-prettify": "^0.1.0",
+    "echarts": "^3.6.2",
+    "vue-bus": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap-dropdown-hover": "^4.1.1"
+  }
+}
